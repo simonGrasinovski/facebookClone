@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="/styles/login.css">
+    <script src="https://kit.fontawesome.com/5b6f79a60a.js" crossorigin="anonymous"></script>
+</head>
+<body class="<%= typeof bgColor !== 'undefined' ? bgColor : ''%>">
+        <div class="container <%= typeof opacity !== 'undefined' ? opacity : ''%>">
+            <div class="left-side">
+                <img class="logo" src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" alt="Facebook">
+                <h2>Connect with friends and the world around you on Facebook.</h2>
+            </div>
+            <form class="login" action="/login" method="POST">
+                <% if(messages.error) {%>
+                    <p class="flash"><%= messages.error %></p>
+                <% } %>
+                <div class="input-fields">
+                    <div class="username"><input type="text" name="email" placeholder="Email or phone number" value="<%= typeof email !== 'undefined' ? email : '' %>"></div>
+                    <div><input type="password" name="password" placeholder="Password"></div>
+                </div>
+                <div><button type="submit" class="login-btn">Log In</button></div>
+                <div class="forgot"><a href="#">Forgot Password?</a></div>
+                <div class="new"><a>Create New Account</a></div>
+            </form>
+        </div>
+        <form class="signup <%= typeof show !== 'undefined' ? show : ''%>" 
+            action="/" method="POST">
+            <div class="heading">Sign Up</div>
+            <div class="subheading">It's quick and easy.</div>
+            <img class="close-btn" src="https://static.xx.fbcdn.net/rsrc.php/v3/y2/r/__geKiQnSG-.png">
+            <input class="vitalInfo" type="text" name='firstName' placeholder="First name"
+            value="<%= typeof firstName !== 'undefined' ? firstName : '' %>">
+            <input class="vitalInfo" type="text" name='lastName' placeholder="Last name"
+            value="<%= typeof lastName !== 'undefined' ? lastName : '' %>">
+            <input type="text" name="email" placeholder="Mobile number or email"
+            value="<%= typeof email !== 'undefined' ? email : '' %>"
+            class="<%= typeof border !== 'undefined' ? border : '' %>">
+            <input type="password" name="password" placeholder="New password"
+            value="<%= typeof password !== 'undefined' ? password : '' %>">
+            <div class="gender-label">Gender</div>
+            <div class="gender-container">
+                <div class="gender-group">
+                    <label for="female">Female</label>
+                    <input type="radio" id="female" name="gender" value="female" 
+                    <%= gender == 'female' ? 'checked' : '' %>>
+                </div>
+                <div class="gender-group">
+                    <label for="male">Male</label>
+                    <input type="radio" id="male" name="gender" value="male"
+                    <%= gender == 'male' ? 'checked' : '' %>>
+                </div>
+                <div class="gender-group">
+                    <label for="custom">Custom</label>
+                    <input type="radio" id="custom" name="gender" value="custom"
+                    <%= gender == 'custom' ? 'checked' : '' %>>
+                </div>
+            </div>
+            <div class="btn-container">
+                <button type="submit" class="createAccBtn">Sign Up</button>
+            </div>
+        </form>
+
+        <script src="javascripts/login.js"></script>
+</body>
+</html>

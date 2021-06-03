@@ -1,0 +1,253 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background-color: #F0F2F5;
+    font-family: Helvetica, Arial, sans-serif;
+    padding-top: 130px;
+}
+.container {
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+.left-side {
+    margin-right: 100px;
+    margin-top: 40px;
+    width: 500px;
+}
+.logo {
+    height: 106px;
+}
+h2 {
+    font-weight: normal;
+    margin-left: 25px;
+    font-size: 28px;
+    letter-spacing: 1px;
+}
+form {
+    background-color: #fff;
+    padding: 5px 16px 20px;  
+    box-shadow: 0 2px 4px rgb(0 0 0 / 10%), 0 8px 16px rgb(0 0 0 / 10%);
+    border-radius: 8px;
+}
+form.login {
+    width: 396px;
+    text-align: center;
+}
+.username {
+    margin-bottom: 10px;
+}
+form.login input:focus {
+    border: 1px solid #1877f2;
+    caret-color: #1877f2;
+    box-shadow: 0 0 0 2px #e7f3ff;
+}
+form.login input:focus::placeholder {
+    color: #bec3c9;
+}
+button {
+    background-color: #1877f2;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-size: 20px;
+    font-weight: bold;
+}
+button:hover {
+    background-color: #166fe5;
+}
+a {
+    display: block;
+    text-decoration: none;
+    color: #1888f2;
+}
+.forgot {
+    margin-top: 16px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #dadde1;
+}
+.forgot:hover {
+    text-decoration: underline;
+}
+.new {
+    background-color: #42b72a;
+    border-radius: 6px;
+    padding: 14px 16px;
+    outline: none;
+    width: 55%;
+    margin: 25px auto 0 auto;
+    cursor: pointer;
+}
+.new a {
+    color: #fff;
+    border: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+.new:hover {
+    background-color: #36a420;
+}
+form.signup {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 16px;
+    width: 440px;
+}
+.signup  {
+    display: none;
+}
+.input-fields {
+    margin: 16px 0;
+}
+button, .input-fields input {
+    border-radius: 6px;
+    padding: 14px 16px;
+    width: 100%;
+    outline: none;
+}
+.input-fields input {
+    font-size: 17px;
+    border: 1px solid #dddfe2;
+    color: #1d2129;
+}
+form.signup div.heading {
+    color: #1c1e21;
+    font-size: 32px;
+    font-weight: bold;
+}
+form.signup div.subheading {
+    color:#606770;
+    font-size: 15px;
+    line-height: 24px;
+    padding-top: 8px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #dadde1;
+}
+form.signup input {
+    margin-top: 16px;
+    padding: 11px;
+    outline: none;
+    font-size: 15px;
+    line-height: 16px;
+    background-color: #f5f6f7;
+    border: 1px solid #ccd0d5;
+    border-radius: 5px;
+    width: 100%;
+}
+form.signup input.vitalInfo {
+    display: inline-block;
+    width: 48%;
+}
+form.signup input.vitalInfo:first-of-type {
+    margin-right: 10px;
+}
+form.signup div {
+    color: #606770;
+    font-size: 15px;
+    line-height: 20px;
+}
+form.signup div.gender-container {
+    display: flex;
+    justify-content: space-between;
+}
+form.signup div.gender-label {
+    margin: 10px 0 5px;
+}
+form.signup div.gender-group {
+    width: 125px;
+    border: 1px solid #ccd0d5;
+    border-radius: 5px;
+    padding: 11px;
+    position: relative;
+    height: 40px;
+}
+form.signup label {
+    color: #1c1e21;
+}
+form.signup input[type="radio"] {
+    width: auto;
+    position: absolute;
+    right: 10px;
+    top: 40%;
+    margin: 0;
+}
+form.signup div.btn-container {
+    display: flex;
+    justify-content: center;
+}
+form.signup button {
+    background-color: #00a400;
+    width: 50%;
+    font-size: 18px;
+    margin: 20px 0 10px;
+    line-height: 36px;
+    padding: 0;
+}
+form.signup button:hover {
+    background: linear-gradient(#79bc64, #578843);
+}
+.close-btn {
+    width: 24px;
+    height: 24px;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+.bgColor {
+    background-color: #fff;
+}
+.opacity {
+    opacity: 0.2;
+}
+.show {
+    display: initial;
+}
+form.signup input.add-border, form.signup div.add-border {
+    border: 1px solid  #ff0000;
+}
+.flash {
+    border: 1px solid;
+    color: #D63301;
+	background-color: #FFCCBA;
+    margin: 10px 0;
+    padding: 10px 0;
+    border-radius: 6px;
+}
+
+@media screen and (max-width: 1075px) {
+    .left-side {
+        width: 400px;
+    }
+    h2 {
+        font-size: 24px;
+    }
+}
+@media screen and (max-width: 950px) {
+    .left-side {
+        margin-right: 50px;
+    }
+}
+@media screen and (max-width: 900px) {
+    body {
+        text-align: center;
+        padding-top: 0;
+        padding-bottom: 30px;
+    }
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+    .left-side {
+        margin: 0 0 40px;
+    }
+    h2 {
+        margin-left: 0;
+        font-size: 22px
+    }
+}
+
